@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<body>
+<div>HOME</div>
+<ul>
+    <li th:each="nota: ${listaNote}">
+        <b th:text="${nota.titolo}">Titolo nota</b>
+        <p th:text="${nota.contenuto}">Contenuto</p>
+    </li>
+</ul>
+</body>
+</html>
