@@ -1,5 +1,6 @@
 package com.WebAnag.Registry.controller;
 
+import com.WebAnag.Registry.assembler.GetUserAssembler;
 import com.WebAnag.Registry.model.Users;
 import com.WebAnag.Registry.service.UsersService;
 import com.WebAnag.Registry.utils.mock.UserMock;
@@ -25,10 +26,13 @@ public class UserController {
             @RequestParam(value = "mock", required = false, defaultValue = "false") Boolean mock
     ) {
 
-        if(Boolean.TRUE.equals(mock)){
+        if (Boolean.TRUE.equals(mock)) {
             return ResponseEntity.ok(UserMock.getUsersMock());
         }
+        List<Users> tempVar = usersService.getAll();
 
-        return ResponseEntity.ok(usersService.getAll());
+        GetUserAssembler assembler = new GetUserAssembler();
+
+        return ResponseEntity.ok(assembler.getUsers(tempVar));
     }
 }
