@@ -1,13 +1,13 @@
-package com.WebAnag.Anagrafica;
+package com.WebAnag.Registry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AnagraficaApplication {
+public class RegistryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AnagraficaApplication.class, args);
+		SpringApplication.run(RegistryApplication.class, args);
 	}
 
 }

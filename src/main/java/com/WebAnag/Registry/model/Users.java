@@ -1,11 +1,11 @@
-package com.WebAnag.Anagrafica.model;
+package com.WebAnag.Registry.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "utenti")
-public class Utenti implements Serializable {
+@Table(name = "users")
+public class Users implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,7 +21,7 @@ public class Utenti implements Serializable {
         return id;
     }
 
-    public Utenti setId(Integer id) {
+    public Users setId(Integer id) {
         this.id = id;
         return this;
     }
@@ -30,7 +30,7 @@ public class Utenti implements Serializable {
         return username;
     }
 
-    public Utenti setUsername(String username) {
+    public Users setUsername(String username) {
         this.username = username;
         return this;
     }
@@ -39,7 +39,7 @@ public class Utenti implements Serializable {
         return password;
     }
 
-    public Utenti setPassword(String password) {
+    public Users setPassword(String password) {
         this.password = password;
         return this;
     }
